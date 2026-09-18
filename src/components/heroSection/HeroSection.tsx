@@ -3,7 +3,7 @@ import banner from "../../assets/banner-stack.png";
 
 const HeroSection = () => {
     return (
-        <section className="max-w-7xl mx-auto my-24 inter-font flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20 p-2">
+        <section className="max-w-7xl mx-auto mt-4 md:my-24 inter-font flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20 p-2 ">
             <div className="flex flex-col gap-10">
                 <div className="flex flex-col gap-6">
                     <h1 className="font-extrabold text-5xl lg:text-6xl leading-15 tracking-[-1.5px]">
