@@ -90,13 +90,13 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="navbar-end flex gap-5">
+                <div className="navbar-end flex gap-2 md:gap-5">
                     <div className="border-2 border-transparent [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E,#7C3AED)_border-box] bg-white rounded-full transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
-                        <button className="font-medium text-sm bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent rounded-full px-4 py-2">
+                        <button className="font-medium text-sm bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent rounded-full px-2 sm:px-4 py-1 sm:py-2">
                             Sign In
                         </button>
                     </div>
-                    <button className="font-medium text-sm text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] rounded-full px-5 py-2.5 transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
+                    <button className="font-medium text-sm text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] rounded-full px-2.5 sm:px-5 py-1.5 sm:py-2.5 transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
                         Sign Up
                     </button>
                 </div>
