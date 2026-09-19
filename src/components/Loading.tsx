@@ -1,5 +1,3 @@
-import React from "react";
-
 const Loading = () => {
     return (
         <section className="min-h-screen md:min-h-[50vh] flex items-center justify-center bg-white inter-font">

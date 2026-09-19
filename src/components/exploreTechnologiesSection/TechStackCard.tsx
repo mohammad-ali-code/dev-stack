@@ -1,6 +1,5 @@
 import React from "react";
 import type { TechStack } from "../../types/techStack";
-import { FaXmark } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { Slide, toast } from "react-toastify";
 

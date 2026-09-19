@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TechnologiesGrid from "./TechnologiesGrid";
 import type { Technology } from "../../types/technology";
 import Loading from "../Loading";
