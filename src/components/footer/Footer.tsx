@@ -49,6 +49,14 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="w-full h-0.5 bg-gray-200"></div>
+            <div className="text-[#94A3B8] text-xs flex justify-between items-center">
+                <span>© 2026 Dev Stack. All rights reserved.</span>
+                <div className="flex gap-6">
+                    <span>Privacy</span>
+                    <span>Terms</span>
+                </div>
+            </div>
         </footer>
     );
 };
