@@ -3,9 +3,9 @@ import logo from "../../assets/logo-text.png";
 
 const Footer = () => {
     return (
-        <footer className="max-w-7xl mx-auto mt-4 md:my-24 lg:gap-20 p-2 space-y-10">
-            <div className="grid grid-cols-5 gap-10">
-                <div className="space-y-3 col-span-2">
+        <footer className="max-w-7xl mx-auto mt-7.5 sm:mt-15 md:mt-4 md:my-24 lg:gap-20 p-2 space-y-10">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-10">
+                <div className="space-y-3 col-span-3 sm:col-span-2">
                     <img src={logo} alt="Logo" />
                     <div className="space-y-6">
                         <p className="text-xs text-[#64748B] max-w-96 w-full">
