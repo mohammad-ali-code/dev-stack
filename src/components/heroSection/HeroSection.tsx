@@ -3,22 +3,22 @@ import banner from "../../assets/banner-stack.png";
 
 const HeroSection = () => {
     return (
-        <section className="max-w-7xl mx-auto mt-4 md:my-24 inter-font flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20 p-2 ">
-            <div className="flex flex-col gap-10">
-                <div className="flex flex-col gap-6">
-                    <h1 className="font-extrabold text-5xl lg:text-6xl leading-15 tracking-[-1.5px]">
+        <section className="max-w-7xl mx-auto mt-4 md:my-24 inter-font flex flex-col lg:flex-row justify-between items-center md:gap-5 lg:gap-20 p-2 ">
+            <div className="flex flex-col gap-5 md:gap-10">
+                <div className="flex flex-col gap-4 md:gap-6">
+                    <h1 className="font-bold md:font-extrabold text-4xl md:text-5xl lg:text-6xl leading-15 tracking-[-1.5px]">
                         Build Your Ideal <br />{" "}
                         <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
                             Development Stack
                         </span>
                     </h1>
-                    <p className="text-lg text-[#475569] leading-7.5 plus-jakarta-sans-font max-w-lg w-full">
+                    <p className="md:text-lg text-[#475569] leading-7.5 plus-jakarta-sans-font max-w-lg w-full">
                         Explore frontend, backend, database, and tooling
                         options, compare them side by side, and put together the
                         stack that fits your next project.
                     </p>
                 </div>
-                <div className="flex gap-7.5">
+                <div className="flex gap-4 md:gap-7.5">
                     <button className="flex-1 font-semibold text-sm text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] rounded-lg px-4 py-3 transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
                         Explore Technologies
                     </button>

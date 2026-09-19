@@ -28,7 +28,7 @@ const ExploreTechnologiesSEction = () => {
     ) : (
         <section className="max-w-7xl mx-auto mt-4 md:my-24 lg:gap-20 p-2">
             <div className="mb-3 md:mb-10">
-                <h2 className="font-extrabold inter-font text-3xl lg:text-4xl mb-2">
+                <h2 className="font-bold md:font-extrabold inter-font text-3xl lg:text-4xl mb-2">
                     Explore the{" "}
                     <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
                         Technologies
