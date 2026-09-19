@@ -38,12 +38,12 @@ const ExploreTechnologiesSEction = () => {
                     Pick one technology per category to build your ideal stack.
                 </p>
             </div>
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-4 gap-8 relative">
                 <TechnologiesGrid
                     technologies={technologies}
                     techStack={techStack}
                     setTachStack={setTachStack}></TechnologiesGrid>
-                <TechStackSection></TechStackSection>
+                <TechStackSection techStack={techStack} setTachStack={setTachStack}></TechStackSection>
             </div>
         </section>
     );

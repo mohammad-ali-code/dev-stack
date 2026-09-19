@@ -22,7 +22,7 @@ const HeroSection = () => {
                     <button className="flex-1 font-semibold text-sm text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] rounded-lg px-4 py-3 transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
                         Explore Technologies
                     </button>
-                    <button className="flex-1 border-[3px] border-transparent [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E,#7C3AED)_border-box] bg-white rounded-lg transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95 px-3 py-2">
+                    <button className="flex-1 border-2 border-transparent [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E,#7C3AED)_border-box] bg-white rounded-lg transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95 px-3 py-2">
                         <span className="font-medium text-sm bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent rounded-lg px-4 py-2">
                             Learn more
                         </span>

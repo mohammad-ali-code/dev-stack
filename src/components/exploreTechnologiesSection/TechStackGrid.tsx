@@ -1,9 +1,20 @@
 import React from "react";
+import type { TechStack } from "../../types/techStack";
+import TechStackCard from "./TechStackCard";
 
-const TechStackGrid = () => {
+interface TechStackGridProps {
+    techStack: TechStack[];
+    setTachStack: React.Dispatch<React.SetStateAction<TechStack[]>>;
+}
+
+const TechStackGrid = ({ techStack, setTachStack }: TechStackGridProps) => {
     return (
-        <div className="border-2 border-dotted rounded-xl border-[#E2E8F0] p-6 text-xs text-[#94A3B8]">
-            <p className="text-center">Your stack is empty.</p>
+        <div className="grid grid-cols-1 gap-1.5">
+            {techStack.map((tech) => (
+                <TechStackCard
+                    tech={tech}
+                    setTachStack={setTachStack}></TechStackCard>
+            ))}
         </div>
     );
 };

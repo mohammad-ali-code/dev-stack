@@ -47,7 +47,7 @@ const TechnologyCard = ({
                 <div className="flex justify-between items-start">
                     <img
                         src={technology.icon}
-                        alt={`${technology.name} logo`}
+                        alt={`${technology.name} icon`}
                         className="w-10"
                     />
                     <p className="border border-transparent [background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E,#7C3AED)_border-box] bg-white rounded-full">
