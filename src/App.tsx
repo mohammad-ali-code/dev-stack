@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 function App() {
     return (
         <>
-            <header>
+            <header className="sticky top-0 z-20">
                 <Navbar></Navbar>
             </header>
             <main>
