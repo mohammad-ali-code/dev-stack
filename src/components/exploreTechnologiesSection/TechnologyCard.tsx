@@ -38,7 +38,7 @@ const TechnologyCard = ({
 
     return (
         <div
-            className={`flex flex-col justify-between gap-1.5 p-5 rounded-2xl bg-white border transition-all duration-300 ease-out${
+            className={`flex flex-col justify-between gap-1.5 p-5 rounded-2xl border-[#E2E8F0] bg-white border-2 transition-all duration-300 ease-out${
                 inTechStack
                     ? "border-transparent shadow-lg shadow-purple-500/20 -translate-y-0.5"
                     : "border-gray-400 hover:[background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E)_border-box] hover:border-transparent hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30"

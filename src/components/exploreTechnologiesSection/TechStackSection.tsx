@@ -27,7 +27,7 @@ const TechStackSection = ({
     };
 
     return (
-        <aside className="p-5 rounded-2xl border border-[#94A3B8] h-fit space-y-4 sticky top-4">
+        <aside className="p-5 rounded-2xl border-2 border-[#E2E8F0] h-fit space-y-4 sticky top-4">
             <div className="space-y-1">
                 <h3 className="text-[#0F172A] font-bold">Your Stack</h3>
                 <p className="text-[#94A3B8] text-sm">
