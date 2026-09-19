@@ -1,14 +1,48 @@
 import React from "react";
 import type { Technology } from "../../types/technology";
 import { FaStar } from "react-icons/fa";
+import type { TechStack } from "../../types/techStack";
+import { Slide, toast } from "react-toastify";
 
 interface TechnologyCardProps {
     technology: Technology;
+    techStack: TechStack[];
+    setTachStack: React.Dispatch<React.SetStateAction<TechStack[]>>;
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({
+    technology,
+    techStack,
+    setTachStack,
+}: TechnologyCardProps) => {
+    const inTechStack = techStack.some((tech) => tech.name === technology.name);
+
+    const handleAddToStack = () => {
+        const newTech = {
+            icon: technology.icon,
+            name: technology.name,
+            category: technology.category,
+        };
+        setTachStack([...techStack, newTech]);
+        toast.success(`Added ${technology.name} to tech stack.`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            transition: Slide,
+        });
+    };
+
     return (
-        <div className="flex flex-col justify-between gap-1.5 p-5 rounded-2xl border-gray-400 hover:[background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E)_border-box] bg-white border hover:border-transparent transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30">
+        <div
+            className={`flex flex-col justify-between gap-1.5 p-5 rounded-2xl bg-white border transition-all duration-300 ease-out${
+                inTechStack
+                    ? "border-transparent shadow-lg shadow-purple-500/20 -translate-y-0.5"
+                    : "border-gray-400 hover:[background:linear-gradient(white,white)_padding-box,linear-gradient(to_right,#FF5722,#D81B7E)_border-box] hover:border-transparent hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30"
+            }`}>
             <div className="space-y-3">
                 <div className="flex justify-between items-start">
                     <img
@@ -45,8 +79,16 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
                         <span>{technology.rating}</span>
                     </p>
                 </div>
-                <button className="w-full mt-4 font-semibold text-sm text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] rounded-lg px-4 py-2 transition-all duration-300 ease-out hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95">
-                    Add to Stack
+                <button
+                    onClick={handleAddToStack}
+                    disabled={inTechStack}
+                    className={`w-full mt-4 font-semibold text-sm rounded-lg px-4 py-2 transition-all duration-300 ease-out
+                        ${
+                            inTechStack
+                                ? "text-[#D81B7E] bg-[#FCE7F3] border border-[#FBCFE8] cursor-not-allowed"
+                                : "text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95"
+                        }`}>
+                    {inTechStack ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
             </div>
         </div>

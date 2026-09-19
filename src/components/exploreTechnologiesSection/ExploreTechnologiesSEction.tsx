@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import TechnologiesGrid from "./TechnologiesGrid";
 import type { Technology } from "../../types/technology";
 import Loading from "../Loading";
+import TechStackSection from "./TechStackSection";
+import type { TechStack } from "../../types/techStack";
 
 const ExploreTechnologiesSEction = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [technologies, setTechnologies] = useState<Technology[]>([]);
+    const [techStack, setTachStack] = useState<TechStack[]>([]);
+
+    console.log(techStack);
 
     useEffect(() => {
         const fetchTechnologies = async () => {
@@ -35,7 +40,10 @@ const ExploreTechnologiesSEction = () => {
             </div>
             <div className="grid grid-cols-4 gap-8">
                 <TechnologiesGrid
-                    technologies={technologies}></TechnologiesGrid>
+                    technologies={technologies}
+                    techStack={techStack}
+                    setTachStack={setTachStack}></TechnologiesGrid>
+                <TechStackSection></TechStackSection>
             </div>
         </section>
     );
