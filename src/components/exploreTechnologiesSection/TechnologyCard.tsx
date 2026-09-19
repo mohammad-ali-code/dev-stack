@@ -18,22 +18,36 @@ const TechnologyCard = ({
     const inTechStack = techStack.some((tech) => tech.name === technology.name);
 
     const handleAddToStack = () => {
-        const newTech = {
-            icon: technology.icon,
-            name: technology.name,
-            category: technology.category,
-        };
-        setTachStack([...techStack, newTech]);
-        toast.success(`Added ${technology.name} to tech stack.`, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "light",
-            transition: Slide,
-        });
+        if (inTechStack) {
+            toast.error(`${technology.name} already in tech stack.`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "light",
+                transition: Slide,
+            });
+        } else {
+            const newTech = {
+                icon: technology.icon,
+                name: technology.name,
+                category: technology.category,
+            };
+            setTachStack([...techStack, newTech]);
+
+            toast.success(`Added ${technology.name} to tech stack.`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "light",
+                transition: Slide,
+            });
+        }
     };
 
     return (
@@ -81,11 +95,11 @@ const TechnologyCard = ({
                 </div>
                 <button
                     onClick={handleAddToStack}
-                    disabled={inTechStack}
+                    // disabled={inTechStack}
                     className={`w-full mt-4 font-semibold text-sm rounded-lg px-4 py-2 transition-all duration-300 ease-out
                         ${
                             inTechStack
-                                ? "text-[#D81B7E] bg-[#FCE7F3] border border-[#FBCFE8] cursor-not-allowed"
+                                ? "text-[#D81B7E] bg-[#FCE7F3] border border-[#FBCFE8]"
                                 : "text-white bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] hover:scale-101 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30 active:scale-95"
                         }`}>
                     {inTechStack ? "✓ Added to Stack" : "Add to Stack"}
